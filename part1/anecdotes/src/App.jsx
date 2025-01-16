@@ -33,7 +33,10 @@ const App = () => {
 
   const [selected, setSelected] = useState(0)
   const [votes, setVotes] = useState([0,0,0,0,0,0,0,0])
-  const NextAnecdote = (selected) => setSelected(selected+1)
+  const NextAnecdote = (selected) => {
+    const random = Math.floor(Math.random() * anecdotes.length)
+    setSelected(random)
+  }
   const setToVoted = () => {
     const updatedVotes = [...votes]
     updatedVotes[selected] += 1
