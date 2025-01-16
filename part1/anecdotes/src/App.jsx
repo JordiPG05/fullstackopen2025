@@ -16,7 +16,10 @@ const MostVoted = ({anecdotes, votes}) => {
     )
   }
   return (
-    <p>{anecdotes[maxVotesIndex]}</p>
+    <div>
+      <p>{anecdotes[maxVotesIndex]}</p>
+      <p>With {maxVotes} votes</p>
+    </div>
   )
 }
 const App = () => {
